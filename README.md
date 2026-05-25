@@ -58,9 +58,9 @@ Visit <http://localhost:3000>. Log in as the admin, or click *Create an account*
 
 ```
 final flashcard/
-├── assignment.html              The single HTML page hosting all views
-├── styles.css                   Styles for auth, cards, and history views
-├── script.js                    SPA logic: auth, view routing, CRUD, history
+├── flashCard.html               The single HTML page hosting all views
+├── flashCard.css                Styles for auth, cards, and history views
+├── flashCard.js                 SPA logic: auth, view routing, CRUD, history
 ├── flashcards_export.sql        Database schema (users, cards, view_history)
 ├── flashcard-server/
 │   ├── server.py                FastAPI app: auth, cards, and history routes

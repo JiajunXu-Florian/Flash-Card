@@ -59,17 +59,17 @@ def get_current_user(request):
     return {"id": payload["sub"], "name": payload["name"], "role": payload["role"]}
 
 @app.get("/")
-@app.get("/assignment.html")
+@app.get("/flashCard.html")
 def serve_html():
-    return FileResponse("../assignment.html")
+    return FileResponse("../flashCard.html")
 
-@app.get("/styles.css")
+@app.get("/flashCard.css")
 def serve_css():
-    return FileResponse("../styles.css")
+    return FileResponse("../flashCard.css")
 
-@app.get("/script.js")
+@app.get("/flashCard.js")
 def serve_js():
-    return FileResponse("../script.js")
+    return FileResponse("../flashCard.js")
 
 @app.get("/cards")
 def get_cards(request: Request):
