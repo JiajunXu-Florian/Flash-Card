@@ -60,7 +60,7 @@ function escapeHtml(str) {
 
 function formatDate(iso) {
   if (!iso) return '';
-  const d = new Date(iso.replace(' ', 'T') + 'Z');
+  const d = new Date(iso.replace(' ', 'T'));
   if (isNaN(d.getTime())) return iso;
   return d.toLocaleString();
 }
