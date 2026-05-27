@@ -247,8 +247,7 @@ function filterCards() {
   if (!q) return cards;
   return cards.filter(card =>
     (card.category || '').toLowerCase().includes(q) ||
-    (card.question || '').toLowerCase().includes(q) ||
-    (card.answer   || '').toLowerCase().includes(q)
+    (card.question || '').toLowerCase().includes(q) 
   );
 }
 
