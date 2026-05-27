@@ -253,7 +253,7 @@ button,input,textarea{font:inherit}
   position:absolute;
   inset:0;
   border-radius:inherit;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.72);
+  box-shadow: var(--bg-card);
   pointer-events:none;
   z-index:3;
 }
@@ -273,6 +273,7 @@ button,input,textarea{font:inherit}
 }
 
 /* Hide the backface of each side so only one side is visible during flip */
+/* Auto Dark Mode */
 .face{
   position:absolute;
   inset:0;
@@ -280,7 +281,7 @@ button,input,textarea{font:inherit}
   display:flex;
   flex-direction:column;
   padding:28px;
-  background:linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(248,250,255,.98) 100%);
+  background:var(--bg-card);
 }
 
 .face.back{
@@ -753,9 +754,6 @@ button,input,textarea{font:inherit}
   .mobile-fab.show{display:grid; place-items:center}
 }
 
-/* ============================================================
-   Auth view (login / register)
-   ============================================================ */
 .view{width:100%}
 
 .auth-card{
@@ -800,9 +798,6 @@ button,input,textarea{font:inherit}
 
 .auth-switch a:hover{text-decoration:underline}
 
-/* ============================================================
-   Top bar: nav buttons, user chip, ghost button
-   ============================================================ */
 .nav-buttons{display:flex; gap:6px; flex:0 0 auto}
 
 .nav-btn{
@@ -871,9 +866,6 @@ body.dark .role-badge.admin{background:rgba(99,102,241,.25); color:#c7d2fe}
 
 .btn-ghost:hover{background:var(--bg-input); color:var(--text)}
 
-/* ============================================================
-   History table
-   ============================================================ */
 .history-wrap{
   background:var(--bg-card);
   border:1px solid var(--bg-card-border);
@@ -935,6 +927,16 @@ body.dark .role-badge.admin{background:rgba(99,102,241,.25); color:#c7d2fe}
   font-weight:700;
 }
 
+  body.dark .field input,
+  body.dark .field textarea,
+  body.dark .field select{
+    color:#e2e8f0;
+  }
+
+  body.dark .field label{
+    color:#cbd5e1;
+  }
+
 .history-delete:hover{background:var(--danger-bg); color:var(--danger)}
 
 @media (max-width: 760px){
@@ -943,3 +945,4 @@ body.dark .role-badge.admin{background:rgba(99,102,241,.25); color:#c7d2fe}
   .history-table tr{padding:12px 0; border-bottom:1px solid var(--line)}
   .history-table tbody td{border:none; padding:6px 16px}
 }
+
